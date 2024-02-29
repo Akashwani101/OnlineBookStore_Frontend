@@ -1,0 +1,21 @@
+<p>signup works!</p>
+<br><br>
+<h1 style="text-align:center">User SignUP</h1><hr>
+<div style="text-align:center" class="container bg-secondary p-3">
+    <form>
+        <h4>Enter Name </h4>
+        <input type="text"name="name" class="form-control" [(ngModel)]="model.name" />
+        <h4>Enter Address </h4>
+        <input type="text" name="addrs" class="form-control" [(ngModel)]="model.addrs"/>
+         <h4>Enter Phone </h4>
+         <input type="number" name="phone" class="form-control" [(ngModel)]="model.phone"/>
+         <h4>Enter Email </h4>
+         <input type="text" id="email" name="email" class="form-control" [(ngModel)]="model.email"/>
+         <h4>Enter Password </h4>
+         <input type="text" id="password" name="password" class="form-control" [(ngModel)]="model.password"/>
+       
+        <button type="submit" class="btn btn-primary" (click)="userlogin()">User Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary" (click)="usersignup()">User SignUP</button>&nbsp;&nbsp;
+
+    </form>
+</div>

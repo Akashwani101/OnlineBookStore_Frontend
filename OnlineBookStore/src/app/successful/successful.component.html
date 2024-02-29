@@ -1,0 +1,37 @@
+
+<section>
+    <div class="container py-3">
+      <div class="card">
+        <div class="row ">
+            <h1 style="color: darkgreen;">You Have Ordered Sucessfully</h1>
+            <p>Explore Our Products More
+            <a style="color:blue" href="http://localhost:4200/user-product" >Go to Home<b></b></a><p>
+                
+          </div>
+        </div>
+    </div>
+  </section>
+ <!-- {{cust | json}}-->
+  <table class="table table-striped">
+    <thead>
+        <tr>         
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Addrs</th>
+            
+        </tr>
+    </thead>
+    <tbody>    
+      <tr>    
+            <td>{{cust.name}}</td>
+            <td>{{cust.phone}}</td>
+            <td>{{cust.addrs}}</td>
+
+          <!--  <td *ngFor="let row of cart1">
+              <p *ngFor="let key of cust">{{ row[key] }}</p>
+            </td>
+          -->
+       </tr>
+
+    </tbody>
+</table>

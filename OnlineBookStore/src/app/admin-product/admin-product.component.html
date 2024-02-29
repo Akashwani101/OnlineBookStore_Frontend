@@ -1,0 +1,43 @@
+
+
+<!--<p>{{ posts | json }}</p>-->
+<table class="table table-striped">
+<thead><tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Publication</th>
+    <th>Stock</th>
+    <th>Price</th>
+    <th>Link</th>
+    <th>Update Book</th>
+    <th>Delete Book</th>
+    
+    </tr></thead>
+    <tbody>
+        <tr *ngFor="let i of posts">
+            <td>{{i.id}}</td>
+            <td><input type="text" [(ngModel)]="i.name" /></td>
+            <td><input type="text" [(ngModel)]="i.description" /></td>
+
+            <td><input type="text" [(ngModel)]="i.publication" /></td>
+            <td><input type="number" [(ngModel)]="i.stk" /></td>
+            <td><input type="number" [(ngModel)]="i.price" /></td>
+            <td><input type="text" [(ngModel)]="i.link" /></td>
+            <td><button type="submit"  class="btn btn-warning" (click)="update(i.id,i.name,i.description,i.publication,i.stk,i.price,i.link)">Update</button></td>
+            <td><button type="submit" class="btn btn-danger" (click)="delete(i.id)">Delete</button></td>
+        </tr>
+        
+        <tr>
+            <td><input type="number" /></td>
+            <td><input type="text" [(ngModel)]="model2.name" /></td>
+            <td><input type="text" [(ngModel)]="model2.description" /></td>
+            <td><input type="text" [(ngModel)]="model2.publication" /></td>
+            <td><input type="number" [(ngModel)]="model2.stk" /></td>
+            <td><input type="number" [(ngModel)]="model2.price" /></td>
+            <td><input type="number" [(ngModel)]="model2.link" /></td>
+            <td><button type="submit" class="btn btn-success" (click)="create()">Add</button></td>
+        </tr>
+    </tbody>
+        </table>
+
